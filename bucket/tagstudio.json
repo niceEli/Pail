@@ -1,6 +1,6 @@
 {
     "##": "PLEASE DO NOT PUT ON buckets/main THIS IS ALPHA SOFTWARE SO WE KEEP IT ON GISTS FOR NOW",
-    "version": "9.3.2-alpha",
+    "version": "9.3.2",
     "description": "TagStudio (Alpha): A User-Focused Document Management System",
     "license": "GPL-3.0",
     "homepage": "https://github.com/TagStudioDev/TagStudio",
