@@ -14,7 +14,8 @@ After manifests have been committed and pushed, run the following:
 
 ```pwsh
 scoop bucket add Pail https://github.com/niceEli/Pail
-scoop install Pail/Bridge
+scoop install Pail/pailtest <# or #> scoop install pailtest
+pailtest # should say Hello Pail! and display your installed packages
 ```
 
 ## How do I contribute new manifests?
