@@ -4,7 +4,7 @@
 
 ![https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F8e590629-9829-44c3-a214-884c8b6fd874.097f13e450129aa2c37b96ff10ff6dae.jpeg&f=1&nofb=1&ipt=1c3b19eeb66408d5021f266631bd65e96a0442158d1cb968ea33640913bd9993&ipo=images](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2F8e590629-9829-44c3-a214-884c8b6fd874.097f13e450129aa2c37b96ff10ff6dae.jpeg&f=1&nofb=1&ipt=1c3b19eeb66408d5021f266631bd65e96a0442158d1cb968ea33640913bd9993&ipo=images)
 
-[![Tests](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/ci.yml) [![Excavator](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml/badge.svg)](https://github.com/<username>/<bucketname>/actions/workflows/excavator.yml)
+[![Tests](https://github.com/niceEli/pail/actions/workflows/ci.yml/badge.svg)](https://github.com/niceEli/pail/actions/workflows/ci.yml) [![Excavator](https://github.com/niceEli/pail/actions/workflows/excavator.yml/badge.svg)](https://github.com/niceEli/pail/actions/workflows/excavator.yml)
 
 niceEli's bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
 
