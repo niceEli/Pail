@@ -2,7 +2,7 @@
     "version": "1.9",
     "description": "Simple-YT-Downloader. YouTube but in the terminal",
     "homepage": "https://github.com/niceEli/Simple-YT-Downloader",
-    "license": "Unlicense",
+    "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/niceEli/Simple-YT-Downloader/releases/download/v1.9/Simple-YT-Downloader.exe",
