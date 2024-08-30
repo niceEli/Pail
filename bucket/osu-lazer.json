@@ -1,6 +1,6 @@
 {
     "version": "2024.817.0",
-    "description": "osu Lazer. A free-to-win rhythm game. Rhythm is just a click away!",
+    "description": "osu Lazer: A free-to-win rhythm game. Rhythm is just a click away!",
     "homepage": "https://osu.ppy.sh/",
     "license": "MIT",
     "architecture": {
@@ -17,8 +17,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/ppy/osu",
-        "regex": "tag/([\\w.-]+)"
+        "url": "https://api.github.com/repos/ppy/osu/releases/latest",
+        "regex": "/releases/tag/([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

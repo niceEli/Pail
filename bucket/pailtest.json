@@ -1,6 +1,6 @@
 {
     "version": "1.0.1",
-    "description": "Pail Test. Check if your install works.",
+    "description": "Pail Test: Check if your install works.",
     "homepage": "https://github.com/niceEli/pailtest",
     "license": "MIT",
     "architecture": {
@@ -16,8 +16,8 @@
         }
     },
     "checkver": {
-        "url": "https://github.com/niceEli/pailtest",
-        "regex": "tag/([\\w.-]+)"
+        "url": "https://api.github.com/repos/niceEli/pailtest/releases/latest",
+        "regex": "/releases/tag/([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
