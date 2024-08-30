@@ -13,6 +13,8 @@ niceEli's bucket for [Scoop](https://scoop.sh), the Windows command-line install
 After manifests have been committed and pushed, run the following:
 
 ```pwsh
+scoop bucket add versions # dependancy
+scoop bucket add extras # dependancy
 scoop bucket add Pail https://github.com/niceEli/Pail
 scoop install Pail/pailtest <# or #> scoop install pailtest
 pailtest # should say Hello Pail! and display your installed packages
