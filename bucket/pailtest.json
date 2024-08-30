@@ -1,13 +1,18 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Pail Test. Check if your install works.",
     "homepage": "https://github.com/niceEli/pailtest",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/niceEli/pailtest/releases/download/1.0.0/pailtest.exe",
-            "hash": "c11a42b451102271806e5b15dd1f0a9e15349c63bcc868d416cee307365791b1",
-            "bin": [["pailtest.exe", "pailtest"]]
+            "url": "https://github.com/niceEli/pailtest/releases/download/1.0.1/pailtest.exe",
+            "hash": "425d1bb9157119c17d897c06beaf7ea65577c18f754e40d46f8811deb86e8c02",
+            "bin": [
+                [
+                    "pailtest.exe",
+                    "pailtest"
+                ]
+            ]
         }
     },
     "checkver": {
