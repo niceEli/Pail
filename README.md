@@ -22,7 +22,7 @@ or use the easy installer
 
 ```pwsh
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-irm -Uri https://raw.githubusercontent.com/niceEli/Pail/master/installPail.ps1 | iex
+irm -Uri https://raw.githubusercontent.com/niceEli/Pail/master/installPail | iex
 ```
 
 ## How do I contribute new manifests?
