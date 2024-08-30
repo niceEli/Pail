@@ -20,6 +20,9 @@
         "url": "https://api.github.com/repos/marticliment/UniGetUI/releases/latest",
         "regex": "/releases/tag/([\\d.]+)"
     },
+    "depends": [
+        "versions/innounp-unicode"
+    ],
     "autoupdate": {
         "architecture": {
             "64bit": {
