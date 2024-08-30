@@ -21,7 +21,8 @@
         "regex": "/releases/tag/([\\d.]+)"
     },
     "depends": [
-        "versions/innounp-unicode"
+        "versions/innounp-unicode",
+        "extras/vcredist"
     ],
     "autoupdate": {
         "architecture": {
