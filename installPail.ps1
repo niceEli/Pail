@@ -6,7 +6,7 @@ function Test-Git {
 
 function Install-Git {
     Write-Output "Git is not installed. Installing Git..."
-    & scoop install git
+    && scoop install git
 }
 
 if (-not (Test-Git)) {
