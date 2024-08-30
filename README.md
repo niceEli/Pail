@@ -10,14 +10,19 @@ niceEli's bucket for [Scoop](https://scoop.sh), the Windows command-line install
 
 ## How do I install these manifests?
 
-After manifests have been committed and pushed, run the following:
-
 ```pwsh
 scoop bucket add versions # dependancy
 scoop bucket add extras # dependancy
 scoop bucket add Pail https://github.com/niceEli/Pail
 scoop install Pail/pailtest <# or #> scoop install pailtest
 pailtest # should say Hello Pail! and display your installed packages
+```
+
+or use the easy installer
+
+```pwsh
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm -Uri https://raw.githubusercontent.com/niceEli/Pail/master/installPail.ps1 | iex
 ```
 
 ## How do I contribute new manifests?
