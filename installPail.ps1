@@ -1,3 +1,18 @@
+function Test-Git {
+    # Check if Git is listed as installed
+    $gitInstalled = & scoop list | Where-Object { $_ -match "git" }
+    return $null -ne $gitInstalled
+}
+
+function Install-Git {
+    Write-Output "Git is not installed. Installing Git..."
+    & scoop install git
+}
+
+if (-not (Test-Git)) {
+    Install-Git
+}
+
 $buckets = @{
     "versions" = $null
     "extras" = $null
