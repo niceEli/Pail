@@ -3,11 +3,13 @@
     "description": "aseprite: Animated sprite editor & pixel art tool",
     "homepage": "https://www.aseprite.org/",
     "license": "https://github.com/aseprite/aseprite/blob/main/EULA.txt",
-    "depends": "libskia-aseprite",
+    "depends": [
+        "libskia-aseprite",
+        "vswhere"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/aseprite/aseprite/releases/download/v1.3.10.1/Aseprite-v1.3.10.1-Source.zip",
-            "pre_install": "Import-Module \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll\"; Enter-VsDevShell 87b72232 -SkipAutomaticLocation -DevCmdArguments \"-arch=x64 -host_arch=x64\"; cd $dir && mkdir build && mkdir build/skia && cp ~\\scoop\\apps\\libskia-aseprite\\current\\* build\\skia\\ -Recurse && cd build && cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLAF_BACKEND=skia -DSKIA_DIR=\"$($dir)\\build\\skia\" -DSKIA_LIBRARY_DIR=\"$($dir)\\build\\skia\\out\\Release-x64\" -DSKIA_LIBRARY=\"$($dir)\\build\\skia\\out\\Release-x64\\skia.lib\" -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_IGNORE_PATH=C:\\MinGW\\bin -DCMAKE_IGNORE_PATH=\"$($scoopdir)\\apps\\mingw\\*\\bin\" -DCMAKE_IGNORE_PATH=\"$($scoopdir)\\apps\\gcc\\*\\bin\" -G Ninja .. && ninja aseprite",
             "hash": "8eea1db7f3465c5d1442c19599de53ab6d69431767ffa320459f5c3ff8cc80b4",
             "shortcuts": [
                 [
@@ -16,6 +18,21 @@
                 ]
             ]
         }
+    },
+    "installer": {
+        "script": [
+            "$vspath=vswhere -version \"[17.0,18.0)\" -products * -requires Microsoft.Component.MSBuild -property installationPath",
+            "if (!$vspath) {scoop uninstall aseprite --purge; scoop uninstall libskia-aseprite --purge; scoop uninstall vswhere --purge; throw \"missing dependency (visual studio 2022) please install visual studio 2022 for c++ development\"}",
+            "if ($env:SCOOP) { $skiapath=\"$env:SCOOP\\apps\\libskia-aseprite\\current\" } else { $skiapath=\"$env:USERPROFILE\\scoop\\apps\\libskia-aseprite\\current\" }",
+            "cmd.exe /k \"`\"$vspath\\VC\\Auxiliary\\Build\\vcvars64.bat`\" & cd /d $dir & mkdir build & cd build & cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLAF_BACKEND=skia -DSKIA_DIR=$skiapath -DSKIA_LIBRARY_DIR=$skiapath\\out\\Release-x64 -DSKIA_LIBRARY=$skiapath\\out\\Release-x64\\skia.lib -G Ninja .. & ninja aseprite & exit\"",
+            "$currPath=pwd",
+            "cd $dir",
+            "if ($dir -eq (Get-Location).Path) { Get-ChildItem -Path . -Force | Where-Object { $_.Name -ne \"build\" } | Remove-Item -Recurse -Force } else { throw \"Path was not updated successfully to $dir, please try again\" }",
+            "mv build\\bin\\aseprite.exe .",
+            "mv build\\bin\\data .",
+            "Remove-Item -Recurse -Force build",
+            "cd $currPath"
+        ]
     },
     "checkver": {
         "url": "https://github.com/aseprite/aseprite/tags",
