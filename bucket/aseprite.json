@@ -1,0 +1,39 @@
+{
+    "version": "1.3.10.1",
+    "description": "aseprite: Animated sprite editor & pixel art tool",
+    "homepage": "https://www.aseprite.org/",
+    "license": "https://github.com/aseprite/aseprite/blob/main/EULA.txt",
+    "depends": "libskia-aseprite",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/aseprite/aseprite/releases/download/v1.3.10.1/Aseprite-v1.3.10.1-Source.zip",
+            "pre_install": "Import-Module \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll\"; Enter-VsDevShell 87b72232 -SkipAutomaticLocation -DevCmdArguments \"-arch=x64 -host_arch=x64\"; cd $dir && mkdir build && mkdir build/skia && cp ~\\scoop\\apps\\libskia-aseprite\\current\\* build\\skia\\ -Recurse && cd build && cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLAF_BACKEND=skia -DSKIA_DIR=\"$($dir)\\build\\skia\" -DSKIA_LIBRARY_DIR=\"$($dir)\\build\\skia\\out\\Release-x64\" -DSKIA_LIBRARY=\"$($dir)\\build\\skia\\out\\Release-x64\\skia.lib\" -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_IGNORE_PATH=C:\\MinGW\\bin -DCMAKE_IGNORE_PATH=\"$($scoopdir)\\apps\\mingw\\*\\bin\" -DCMAKE_IGNORE_PATH=\"$($scoopdir)\\apps\\gcc\\*\\bin\" -G Ninja .. && ninja aseprite",
+            "hash": "8eea1db7f3465c5d1442c19599de53ab6d69431767ffa320459f5c3ff8cc80b4",
+            "shortcuts": [
+                [
+                    "build/bin/aseprite.exe",
+                    "Aseprite"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://github.com/aseprite/aseprite/tags",
+        "regex": "/releases/tag/v(\\d+(\\.\\d+)+)(?![\\.\\d-])"
+    },
+    "notes": [
+        "By Installing You Agree To The Aseprite EULA",
+        "https://github.com/aseprite/aseprite/blob/main/EULA.txt",
+        "Pail Maintainers Take 0 Responsibility For Any Legal Issues",
+        "I Reccomend Buying First (It's Worth It)",
+        "I Will Only Use On PCS I Dont Install Steam On",
+        "You Should Do The Same"
+    ],
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/aseprite/aseprite/releases/download/v$version/Aseprite-v$version-Source.zip"
+            }
+        }
+    }
+}

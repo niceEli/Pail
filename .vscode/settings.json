@@ -23,12 +23,4 @@
         "**/.DS_Store": true,
         "**/tmp": true
     },
-    "workbench.colorCustomizations": {
-        "statusBar.noFolderForeground": "#ffffff",
-        "statusBar.noFolderBackground": "#01182e",
-        "statusBar.debuggingBackground": "#CC0066",
-        "activityBar.background": "#050F99",
-        "titleBar.activeBackground": "#0716D6",
-        "titleBar.activeForeground": "#FBFBFF"
-    }
 }
