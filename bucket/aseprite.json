@@ -13,7 +13,7 @@
             "hash": "8eea1db7f3465c5d1442c19599de53ab6d69431767ffa320459f5c3ff8cc80b4",
             "shortcuts": [
                 [
-                    "build/bin/aseprite.exe",
+                    "aseprite.exe",
                     "Aseprite"
                 ]
             ]
