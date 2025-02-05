@@ -15,6 +15,9 @@
             ]
         }
     },
+    "persist": [
+        ["config", "midi_config"]
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/NotHammer043/nanoMIDIPlayer/releases/latest",
         "regex": "/releases/tag/Release-v(\\d+(?:\\.\\d+)+)"
