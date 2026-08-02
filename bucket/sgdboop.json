@@ -1,12 +1,12 @@
 {
-    "version": "1.4.2",
+    "version": "1.4.3",
     "description": "SGDBoop: A program used for applying custom artwork to Steam, using SteamGridDB. Supports both Windows and Linux, written completely in C",
     "homepage": "https://github.com/SteamGridDB/SGDBoop",
     "license": "CC-BY-NC-4.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SteamGridDB/SGDBoop/releases/download/v1.4.2/sgdboop-win64.zip",
-            "hash": "232209ce5b742e0190552e7606a6ac266f11e7b19177ab5d09f92a1c3211b6a9"
+            "url": "https://github.com/SteamGridDB/SGDBoop/releases/download/v1.4.3/sgdboop-win64.zip",
+            "hash": "73b3213470927735a2de6aa77e447a3436d36447ab61ac0d4a8126ea0b552e6b"
         }
     },
     "bin": "SGDBoop.exe",
